@@ -1,11 +1,14 @@
 <meta charset="UTF-8">
 <title>相機</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
 <style>
 	body {
 		padding:0px;
 		margin:0px;
+		background:#000;
 	}
 video {
 width:auto;
@@ -16,6 +19,14 @@ position:fixed;
 left:50%;
 top:50%;
 transform:translate(-50%,-50%);
+	}
+	.bottom {
+		position:fixed;
+		left:0px;
+		bottom:0px;
+		width:100%;
+		height:var(--gbh-h);
+		background:#000;
 	}
 	</style>
 	<div id="results">
@@ -41,6 +52,7 @@ facingMode: "environment"
 	</script>
 	
 	<script>
+		$(".bottom").css('height':($(window).heiht()-$('video').height())/2});
 		function take_snapshot() {
 			// take snapshot and get image data
 			Webcam.snap( function(data_uri) {
