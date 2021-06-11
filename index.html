@@ -28,14 +28,23 @@ transform:translate(-50%,-50%);
 		height:var(--gbh-h);
 		background:#fff;
 	}
+	.tt {
+		width:80px;
+		height:80px;
+		border-radius:99em;
+		position:fixed;
+		left:50;
+		bottom:30px;
+		transform:translateX(-50%);
+		background:#fff;
+	}
 	</style>
 	<div id="results">
 	</div>
 
 	
 	<div id="my_camera"><video autoplay="autoplay" playsinline="playsinline"></video></div>
-	<a href="javascript:take_snapshot()">take_snapshot</a>
-
+<div class="tt"></div>
 	<script>
 		
 		Webcam.set({
@@ -60,5 +69,8 @@ facingMode: "environment"
 				document.getElementById('results').innerHTML = '<img src="' + data_uri + '" style="height:100px;width:100px;object-fit: cover;">' ;
 			} );
 		}
+		$('.tt').click(function() {
+			take_snapshot();
+		});
 		
 	</script>
