@@ -57,7 +57,7 @@ facingMode: "environment"
 		function take_snapshot() {
 			// take snapshot and get image data
 			Webcam.snap( function(data_uri) {
-				document.getElementById('results').innerHTML = '<img src="' + data_uri + '">' ;
+				document.getElementById('results').innerHTML = '<img src="' + data_uri + '" style="height:100px;width:100px;object-fit: cover;">' ;
 			} );
 		}
 		
