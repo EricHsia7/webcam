@@ -23,11 +23,10 @@
 	
 	<!-- Configure a few settings and attach camera -->
 	<script>
-		let stream = await navigator.mediaDevices.getUserMedia({video: true});
-let {width, height} = stream.getTracks()[0].getSettings();
+		
 		Webcam.set({
-			width: width,
-			height: height,
+			width: 1024,
+			height: 1365,
 			image_format: 'jpeg',
 			jpeg_quality: 45
 		});
