@@ -34,7 +34,6 @@ transform:translate(-50%,-50%);
 
 	
 	<div id="my_camera"><video autoplay="autoplay" playsinline="playsinline"></video></div>
-<div class="bottom"></div>
 	<a href="javascript:take_snapshot()">take_snapshot</a>
 
 	<script>
@@ -54,7 +53,7 @@ facingMode: "environment"
 	</script>
 	
 	<script>
-		$(".bottom").css('height':($(window).heiht()-$('video').height())/2});
+		//$(".bottom").css('height':($(window).heiht()-$('video').height())/2});
 		function take_snapshot() {
 			// take snapshot and get image data
 			Webcam.snap( function(data_uri) {
