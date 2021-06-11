@@ -133,8 +133,8 @@ genid5 += '-' + genid4 ;
 			take_snapshot();
 		});
 		
-		document.getElementById('cc').width = window.width ;
-		document.getElementById('cc').height = window.height ;
+		document.getElementById('cc').width = $(window).width() ;
+		document.getElementById('cc').height = $(window).height() ;
 		var ctx = document.getElementById('cc').getContext('2d');
 		function gtg() {
 			Webcam.snap( function(data_uri, canvas, context) {	
