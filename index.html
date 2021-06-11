@@ -152,5 +152,8 @@ Webcam.snap( function(data_uri, canvas, context) {
 		ctx.drawImage( canvas, 0, 0 );
 	});
 		}
+		Webcam.on( 'live', function() {
 		setInterval(gtg,1);
+	} );
+		
 	</script>
