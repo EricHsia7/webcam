@@ -4,22 +4,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
 
 
-<style type="text/css">
-		body { font-family: Helvetica, sans-serif; }
-		h2, h3 { margin-top:0; }
-		form { margin-top: 15px; }
-		form > input { margin-right: 15px; }
-		#results { float:right; margin:20px; padding:20px; border:1px solid; background:#ccc; }
+<style>
+		
 	</style>
 </head>
 <body>
 	<div id="results">
-
 	</div>
 
 	
 	<div id="my_camera" style="width: 320px; height: 240px;"><div></div><video autoplay="autoplay" playsinline="playsinline" style="width: 320px; height: 240px;"></video></div>
-	
+	<a href="javascript:take_snapshot()">take_snapshot</a>
 	<script>
 		
 		Webcam.set({
@@ -46,5 +41,5 @@ document.getElementById('cc').height = 678 ;
 				document.getElementById('results').innerHTML = '<img src="' + data_uri + '">' ;
 			} );
 		}
-		setInterval(take_snapshot,100);
+		
 	</script>
