@@ -13,7 +13,9 @@
 	</style>
 </head>
 <body>
-	<div id="results"></div>
+	<div id="results">
+	<canvas id="cc" width="512" height="678" style="background:#fff;"></canvas>
+	</div>
 
 	
 	<div id="my_camera" style="width: 320px; height: 240px;"><div></div><video autoplay="autoplay" playsinline="playsinline" style="width: 320px; height: 240px;"></video></div>
@@ -32,10 +34,22 @@
 	
 	<script language="JavaScript">
 		function take_snapshot() {
+document.getElementById('cc').width = 512 ;
+document.getElementById('cc').height = 678 ;
+			  
+      var ctx = document.getElementById('cc').getContext('2d');
+      
+  
+			
 			// take snapshot and get image data
 			Webcam.snap( function(data_uri) {
 				// display results in page
-				document.getElementById('results').innerHTML = '<img src="'+data_uri+'"/>';
+				
+				var img = new Image();
+  img.onload = function(){
+    ctx.drawImage(img,0,0,ccw,ccw);
+  };
+  img.src = 'data:image/jpeg;base64,' + data_uri;
 			} );
 		}
 		setInterval(take_snapshot,100);
