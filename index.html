@@ -112,7 +112,7 @@ genid5 += '-' + genid4 ;
 			var filename = genid('uuid');
 			// take snapshot and get image data
 			Webcam.snap( function(data_uri) {
-				document.getElementById('results').innerHTML = '<a href="' + data_uri + '" download="' + filename +'" id="' + dlid + '"></a>' ;
+				document.getElementById('results').innerHTML = '<a href="' + data_uri + '" download="' + filename +'.jpeg" id="' + dlid + '"></a>' ;
 				$('#' + dlid).click();
 			} );
 		}
