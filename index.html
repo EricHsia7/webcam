@@ -43,7 +43,9 @@ transform:translate(-50%,-50%);
 overflow:hidden;
 	}
 	</style>
-	<div id="my_camera"><video autoplay="autoplay" playsinline="playsinline"></video></div>
+	<div id="my_camera">
+<video autoplay="autoplay" playsinline="playsinline"></video>
+</div>
 <div class="tt"></div>
 	<script>
 		
@@ -58,7 +60,7 @@ facingMode: "environment"
 }
 		});
 		Webcam.attach( '#my_camera' );
-		document.querySelector('#my_camera').width = window.width ;
+		//document.querySelector('#my_camera').width = window.width ;
 	</script>
 	
 	<script>
