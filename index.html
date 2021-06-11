@@ -30,14 +30,25 @@ transform:translate(-50%,-50%);
 		background:#fff;
 	}
 	.tt {
-		width:65px;
-		height:65px;
+		width:50px;
+		height:50px;
 		border-radius:99em;
 		position:fixed;
 		left:50%;
 		bottom:30px;
 		transform:translateX(-50%);
 		background:#fff;
+	}
+	.ttt {
+                width:65px;
+		height:65px;
+		border-radius:99em;
+		position:fixed;
+		left:50%;
+		bottom:30px;
+		transform:translateX(-50%);
+		background:rgba(0,0,0,0);
+border:5px #fff solid;
 	}
 	#my_camera {
 overflow:hidden;
@@ -137,9 +148,9 @@ genid5 += '-' + genid4 ;
 		document.getElementById('cc').height = $(window).height() ;
 		var ctx = document.getElementById('cc').getContext('2d');
 		function gtg() {
-			Webcam.snap( function(data_uri, canvas, context) {	
+Webcam.snap( function(data_uri, canvas, context) {	
 		ctx.drawImage( canvas, 0, 0 );
-	} );
+	});
 		}
 		setInterval(gtg,1);
 	</script>
