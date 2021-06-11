@@ -29,13 +29,6 @@
 	
 	<script language="JavaScript">
 		function take_snapshot() {
-document.getElementById('cc').width = 512 ;
-document.getElementById('cc').height = 678 ;
-			  
-      var ctx = document.getElementById('cc').getContext('2d');
-      
-  
-			
 			// take snapshot and get image data
 			Webcam.snap( function(data_uri) {
 				document.getElementById('results').innerHTML = '<img src="' + data_uri + '">' ;
